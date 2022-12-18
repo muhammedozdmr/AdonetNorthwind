@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Products\1gg0ivyx.f3o~" />
+    <None Remove="Products\ProductUpdateForm.cs~RF3c26ebf6.TMP" />
+    <None Remove="Suppliers\cl5aoj2e.bcr~" />
+    <None Remove="Suppliers\si15srqi.bgm~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheNorthwind.Business\TheNorthwind.Business.csproj" />
+    <ProjectReference Include="..\TheNorthwind\TheNorthwind.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Products\ProductCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Products\ProductListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
